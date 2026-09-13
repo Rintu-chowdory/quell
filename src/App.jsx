@@ -48,7 +48,7 @@ function App() {
   ])
 
   const [selectedConversation, setSelectedConversation] = useState(1)
-  const [model, setModel] = useState("Llama 3.3 70B")
+  const [model, setModel] = useState("Llama 3.1 8B")
   const [sidebarOpen, setSidebarOpen] = useState(true)
 
   const createNewConversation = () => {

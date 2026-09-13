@@ -4,11 +4,12 @@ import MessageBubble from '../components/MessageBubble'
 import SettingsPanel from '../components/SettingsPanel'
 
 const GROQ_MODELS = {
-  'Llama 3.3 70B': 'llama-3.3-70b-versatile',
   'Llama 3.1 8B': 'llama-3.1-8b-instant',
-  'Mixtral 8x7B': 'mixtral-8x7b-32768',
+  'Llama 3.3 70B': 'llama-3.3-70b-versatile',
   'Gemma 2 9B': 'gemma2-9b-it',
 }
+
+const DEFAULT_GROQ_MODEL = 'llama-3.1-8b-instant'
 
 function Chat({ conversation, onUpdateConversation, model, sidebarOpen, onToggleSidebar }) {
   const [messages, setMessages] = useState(conversation?.messages || [])
@@ -45,7 +46,7 @@ function Chat({ conversation, onUpdateConversation, model, sidebarOpen, onToggle
     setIsTyping(true)
 
     try {
-      const groqModel = GROQ_MODELS[model] || 'llama-3.3-70b-versatile'
+      const groqModel = GROQ_MODELS[model] || DEFAULT_GROQ_MODEL
       const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
         method: 'POST',
         headers: {
