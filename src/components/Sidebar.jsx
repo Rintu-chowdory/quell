@@ -49,9 +49,10 @@ function Sidebar({
             onChange={(e) => onModelChange(e.target.value)}
             className="w-full mt-1 bg-chat-bg border border-gray-600 rounded-lg p-2 text-sm text-gray-200 hover:border-emerald-500 transition cursor-pointer"
           >
-            <option value="Llama 3.1 8B">Llama 3.1 8B</option>
-            <option value="Llama 3.3 70B">Llama 3.3 70B (if enabled)</option>
-            <option value="Gemma 2 9B">Gemma 2 9B</option>
+            <option value="GPT OSS 120B">GPT OSS 120B</option>
+            <option value="GPT OSS 20B">GPT OSS 20B</option>
+            <option value="Llama 4 Scout">Llama 4 Scout</option>
+            <option value="Qwen 3 32B">Qwen 3 32B</option>
           </select>
         </div>
 

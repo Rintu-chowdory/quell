@@ -53,7 +53,8 @@ function App() {
 
   useEffect(() => {
     const savedModel = localStorage.getItem("chatforge_model")
-    if (savedModel) setModel(savedModel)
+    const supportedModels = ["GPT OSS 120B", "GPT OSS 20B", "Llama 4 Scout", "Qwen 3 32B"]
+    if (savedModel && supportedModels.includes(savedModel)) setModel(savedModel)
   }, [])
 
   const createNewConversation = () => {

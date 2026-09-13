@@ -98,6 +98,7 @@ function Chat({ conversation, onUpdateConversation, model, sidebarOpen, onToggle
           <div>
             <h1 className="text-lg font-semibold text-white">{conversation?.title || 'New Conversation'}</h1>
             <p className="text-xs text-gray-500">{GROQ_MODELS[model] || model} · Groq</p>
+            <p className="text-xs text-emerald mt-1">Active model: {model || 'GPT OSS 120B'}</p>
           </div>
         </div>
         <button onClick={() => setShowSettings(!showSettings)} className="text-gray-400 hover:text-emerald transition p-2 rounded-lg hover:bg-gray-700/50">
