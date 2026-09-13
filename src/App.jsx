@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 // build-bust
 import { Routes, Route } from "react-router-dom"
 import Sidebar from "./components/Sidebar"
@@ -48,8 +48,13 @@ function App() {
   ])
 
   const [selectedConversation, setSelectedConversation] = useState(1)
-  const [model, setModel] = useState("Llama 3.1 8B")
+  const [model, setModel] = useState("GPT OSS 120B")
   const [sidebarOpen, setSidebarOpen] = useState(true)
+
+  useEffect(() => {
+    const savedModel = localStorage.getItem("chatforge_model")
+    if (savedModel) setModel(savedModel)
+  }, [])
 
   const createNewConversation = () => {
     const newId = Math.max(...conversations.map(c => c.id), 0) + 1

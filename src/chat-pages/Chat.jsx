@@ -4,12 +4,13 @@ import MessageBubble from '../components/MessageBubble'
 import SettingsPanel from '../components/SettingsPanel'
 
 const GROQ_MODELS = {
-  'Llama 3.1 8B': 'llama-3.1-8b-instant',
-  'Llama 3.3 70B': 'llama-3.3-70b-versatile',
-  'Gemma 2 9B': 'gemma2-9b-it',
+  'GPT OSS 120B': 'openai/gpt-oss-120b',
+  'GPT OSS 20B': 'openai/gpt-oss-20b',
+  'Llama 4 Scout': 'meta-llama/llama-4-scout-17b-16e-instruct',
+  'Qwen 3 32B': 'qwen/qwen3-32b',
 }
 
-const DEFAULT_GROQ_MODEL = 'llama-3.1-8b-instant'
+const DEFAULT_GROQ_MODEL = 'openai/gpt-oss-120b'
 
 function Chat({ conversation, onUpdateConversation, model, sidebarOpen, onToggleSidebar }) {
   const [messages, setMessages] = useState(conversation?.messages || [])

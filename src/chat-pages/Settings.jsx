@@ -3,15 +3,16 @@ import { Link } from 'react-router-dom'
 import { ArrowLeft, Eye, EyeOff, Save, CheckCircle, ExternalLink } from 'lucide-react'
 
 const GROQ_MODELS = [
-  { label: 'Llama 3.1 8B', value: 'llama-3.1-8b-instant', desc: 'Fast and broadly available on Groq' },
-  { label: 'Llama 3.3 70B', value: 'llama-3.3-70b-versatile', desc: 'Higher quality when enabled for your key' },
-  { label: 'Gemma 2 9B', value: 'gemma2-9b-it', desc: 'Efficient and capable' },
+  { label: 'GPT OSS 120B', value: 'openai/gpt-oss-120b', desc: 'High-quality open-weight model' },
+  { label: 'GPT OSS 20B', value: 'openai/gpt-oss-20b', desc: 'Fast open-weight model' },
+  { label: 'Llama 4 Scout', value: 'meta-llama/llama-4-scout-17b-16e-instruct', desc: 'Multimodal Llama model' },
+  { label: 'Qwen 3 32B', value: 'qwen/qwen3-32b', desc: 'Strong reasoning and coding' },
 ]
 
 function Settings() {
   const [showApiKey, setShowApiKey] = useState(false)
   const [apiKey, setApiKey] = useState('')
-  const [model, setModel] = useState('Llama 3.1 8B')
+  const [model, setModel] = useState('GPT OSS 120B')
   const [temperature, setTemperature] = useState(0.7)
   const [saved, setSaved] = useState(false)
 
@@ -19,7 +20,7 @@ function Settings() {
     const k = localStorage.getItem('chatforge_groq_key')
     if (k) setApiKey(k)
     const m = localStorage.getItem('chatforge_model')
-    if (m) setModel(GROQ_MODELS.some((item) => item.label === m) ? m : 'Llama 3.1 8B')
+    if (m) setModel(GROQ_MODELS.some((item) => item.label === m) ? m : 'GPT OSS 120B')
     const t = localStorage.getItem('chatforge_temperature')
     if (t) setTemperature(parseFloat(t))
   }, [])
