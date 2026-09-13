@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.chat-bubble {
+  @apply rounded-lg px-4 py-2 max-w-xs lg:max-w-md xl:max-w-lg break-words;
+}
+
+.chat-bubble-user {
+  @apply bg-emerald text-white;
+}
+
+.chat-bubble-ai {
+  @apply bg-chat-dark text-gray-100;
+}
+
+.typing-indicator {
+  display: flex;
+  gap: 4px;
+}
+
+.typing-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #10b981;
+  animation: typing 1.4s infinite;
+}
+
+.typing-dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typing-dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes typing {
+  0%, 60%, 100% {
+    opacity: 0.3;
+    transform: translateY(0);
+  }
+  30% {
+    opacity: 1;
+    transform: translateY(-8px);
+  }
+}
+
+.hljs {
+  background: #161b22 !important;
+  color: #c9d1d9 !important;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  overflow-x: auto;
+}
+
+.hljs-string {
+  color: #79c0ff;
+}
+
+.hljs-number {
+  color: #79c0ff;
+}
+
+.hljs-literal {
+  color: #79c0ff;
+}
+
+.hljs-attr {
+  color: #79c0ff;
+}
+
+.hljs-built_in {
+  color: #ffa657;
+}
+
+.hljs-keyword {
+  color: #ff7b72;
+}
