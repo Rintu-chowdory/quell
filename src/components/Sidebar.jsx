@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "react-router-dom"
-import { Plus, MessageSquare, Settings, BarChart3, ChevronLeft, ChevronRight, Trash2, Shield } from "lucide-react"
+import { Plus, MessageSquare, Settings, BarChart3, ChevronLeft, ChevronRight, Trash2, Shield, Calculator, LibraryBig, Scale } from "lucide-react"
 
 function Sidebar({
   conversations,
@@ -103,6 +103,27 @@ function Sidebar({
           >
             <BarChart3 size={18} />
             <span className="text-sm">Usage</span>
+          </Link>
+          <Link
+            to="/tools/tokens"
+            className="w-full flex items-center gap-2 p-3 rounded-lg hover:bg-gray-700/50 transition text-gray-300 hover:text-gray-100"
+          >
+            <Calculator size={18} />
+            <span className="text-sm">Token-Rechner</span>
+          </Link>
+          <Link
+            to="/tools/prompts"
+            className="w-full flex items-center gap-2 p-3 rounded-lg hover:bg-gray-700/50 transition text-gray-300 hover:text-gray-100"
+          >
+            <LibraryBig size={18} />
+            <span className="text-sm">Prompt-Bibliothek</span>
+          </Link>
+          <Link
+            to="/tools/models"
+            className="w-full flex items-center gap-2 p-3 rounded-lg hover:bg-gray-700/50 transition text-gray-300 hover:text-gray-100"
+          >
+            <Scale size={18} />
+            <span className="text-sm">Modell-Vergleich</span>
           </Link>
           <Link
             to="/settings"

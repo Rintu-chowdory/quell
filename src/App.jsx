@@ -8,6 +8,9 @@ import Settings from "./chat-pages/Settings"
 import UsageDashboard from "./chat-pages/UsageDashboard"
 import Datenschutz from "./chat-pages/Datenschutz"
 import Impressum from "./chat-pages/Impressum"
+import TokenRechner from "./chat-pages/TokenRechner"
+import PromptBibliothek from "./chat-pages/PromptBibliothek"
+import ModellVergleich from "./chat-pages/ModellVergleich"
 
 function App() {
   const [conversations, setConversations] = useState([
@@ -113,7 +116,10 @@ function App() {
         />
         <Route path="/conversations" element={<Conversations conversations={conversations} onSelectConversation={setSelectedConversation} />} />
         <Route path="/settings" element={<Settings />} />
-        <Route path="/usage" element={<UsageDashboard />} />
+        <Route path="/usage" element={<UsageDashboard conversations={conversations} model={model} />} />
+        <Route path="/tools/tokens" element={<TokenRechner />} />
+        <Route path="/tools/prompts" element={<PromptBibliothek />} />
+        <Route path="/tools/models" element={<ModellVergleich />} />
         <Route path="/datenschutz" element={<Datenschutz />} />
         <Route path="/impressum" element={<Impressum />} />
       </Routes>
