@@ -321,7 +321,7 @@ Als Wochenplan mit konkreten Aufgaben, Ressourcen-Typen und Wochentests (Selbstc
 Meine Erklärung: [MEINE ERKLÄRUNG]`},{kategorie:"Coding",titel:"Code reviewen",prompt:"Reviewe den folgenden Code. Prüfe: Bugs, Sicherheitsprobleme, Performance, Lesbarkeit. Gib Verbesserungen als nummerierte Liste mit Code-Beispielen. Kein Rewrite des ganzen Codes.\n\n```[SPRACHE]\n[CODE]\n```"},{kategorie:"Coding",titel:"Bug debuggen",prompt:`Ich habe einen Bug. Gib mir eine systematische Debug-Anleitung mit Hypothesen (wahrscheinlichste zuerst) und wie ich jede prüfe.
 
 Erwartet: [WAS SOLLTE PASSIEREN]
-Passiert: [WAS PASSIERT STATTDRESSEN]
+Passiert: [WAS PASSIERT STATTDessen]
 Fehlermeldung: [FEHLER]
 Code: [RELEVANTER CODE]`},{kategorie:"Coding",titel:"Funktion mit Tests schreiben",prompt:`Schreibe eine Funktion in [SPRACHE]: [BESCHREIBUNG].
 

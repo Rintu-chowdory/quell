@@ -46,7 +46,7 @@ const PROMPTS = [
   {
     kategorie: 'Coding',
     titel: 'Bug debuggen',
-    prompt: 'Ich habe einen Bug. Gib mir eine systematische Debug-Anleitung mit Hypothesen (wahrscheinlichste zuerst) und wie ich jede prüfe.\n\nErwartet: [WAS SOLLTE PASSIEREN]\nPassiert: [WAS PASSIERT STATTDRESSEN]\nFehlermeldung: [FEHLER]\nCode: [RELEVANTER CODE]',
+    prompt: 'Ich habe einen Bug. Gib mir eine systematische Debug-Anleitung mit Hypothesen (wahrscheinlichste zuerst) und wie ich jede prüfe.\n\nErwartet: [WAS SOLLTE PASSIEREN]\nPassiert: [WAS PASSIERT STATTDessen]\nFehlermeldung: [FEHLER]\nCode: [RELEVANTER CODE]',
   },
   {
     kategorie: 'Coding',
