@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import { Send, Menu, Settings, AlertCircle } from 'lucide-react'
 import MessageBubble from '../components/MessageBubble'
 import SettingsPanel from '../components/SettingsPanel'
@@ -115,7 +116,7 @@ function Chat({ conversation, onUpdateConversation, model, sidebarOpen, onToggle
             <h2 className="text-2xl font-semibold text-white mb-2">ChatForge</h2>
             <p className="text-gray-400 max-w-md mb-2">Powered by Groq — blazing fast inference.</p>
             <p className="text-gray-500 text-sm mb-4">Add your Groq API key in Settings to start chatting.</p>
-            <a href="/settings" className="text-emerald hover:underline text-sm">Go to Settings</a>
+            <Link to="/settings" className="text-emerald hover:underline text-sm">Go to Settings</Link>
           </div>
         ) : (
           <>
