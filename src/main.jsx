@@ -6,7 +6,8 @@ import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter basename={import.meta.env.BASE_URL}>
+    {/* BASE_URL kann "/quell/" sein – react-router mag keinen abschließenden Slash im basename */}
+    <BrowserRouter basename={import.meta.env.BASE_URL.replace(/\/+$/, "") || "/"}>
       <App />
     </BrowserRouter>
   </React.StrictMode>,
